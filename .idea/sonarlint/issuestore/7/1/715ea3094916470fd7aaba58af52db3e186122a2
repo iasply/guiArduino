@@ -1,0 +1,16 @@
+
+k
+java:S1604."(Make this anonymous inner class a lambda(À³äø8ãÀôş1J$23a38c6f-9644-4d3c-8313-642107e66456
+k
+java:S16047"(Make this anonymous inner class a lambda(Êùóò8äÀôş1J$1d175965-e9d8-4c15-ac06-2969c5159e10
+Œ
+java:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´8«Áôş1J$42809df8-7c8d-487e-b1f2-e6e82e59a1e4
+r	java:S106`"+Replace this use of System.out by a logger.(øºÑûúÿÿÿÿ8¼Áôş1J$6189ecb2-d71b-4395-98f8-ad7059897a87
+…
+java:S1126†"AReplace this if-then-else statement by a single return statement.(¤Ôï‘8ÈÁôş1J$7a7d355b-4ea1-457e-ac9b-f3e4560c10fa
+o
+java:S1068"-Remove this unused "pesoLabel" private field.(Úáè/8ÊÁôş1J$9630be56-0955-4b49-a7cd-366980137b2c
+u
+java:S1068"-Remove this unused "taraLabel" private field.(çÃ”şÿÿÿÿÿ8ËÁôş1J$180013ba-b06f-49d8-947b-5293e994546c
+q
+java:S1068"/Remove this unused "sensorLabel" private field.(æãÓS8ËÁôş1J$0c8f21cd-15e1-473f-bf95-0bdde89a6d18

@@ -5,7 +5,7 @@ import com.fazecast.jSerialComm.SerialPort;
 import java.util.function.Consumer;
 
 public class ArduinoSerialReader {
-    static final String ARDUINO = "USB-SERIAL CH340 (COM3)";
+    static final String ARDUINO = "USB-SERIAL CH340";
     private String mensageToSerial = null;
     private SerialPort port;
 
@@ -30,7 +30,7 @@ public class ArduinoSerialReader {
     static public SerialPort identificarArduino() {
         SerialPort[] ports = SerialPort.getCommPorts();
         for (SerialPort port : ports) {
-               if (port.getDescriptivePortName().equals(ARDUINO)) {
+               if (port.getDescriptivePortName().contains(ARDUINO)) {
                 System.out.println(port);
                 return port;
             }

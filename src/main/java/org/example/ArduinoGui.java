@@ -17,6 +17,8 @@ public class ArduinoGui {
     private JLabel sensorLabel;
     private ArduinoSerialReader arduinoSerialReader;
 
+    private float pesoGlobal = 0;
+
     public ArduinoGui(ArduinoSerialReader arduinoSerialReader) {
         this.arduinoSerialReader = arduinoSerialReader;
         createAndShowGUI();
@@ -92,7 +94,7 @@ public class ArduinoGui {
         SwingUtilities.invokeLater(() -> {
             textArea.append(message + "\n");
             System.out.println(message);
-//
+
             if (!message.isEmpty()) {
                 String substring = message.substring(3, message.length());
 
@@ -100,12 +102,39 @@ public class ArduinoGui {
 
                 for (String s : vetorString) {
                     String[] split = s.split("=");
-                    MensagemEnum mensagemEnum = padraoToEnum(split[0]);
-                    mensagemEnum.setjLabel(mensagemEnum.getNomeDisplay() + ": " + split[1]);
+                    if (split[0].equals(PESO.getNomePadrao())) {
+                        boolean b = deveAlterar(Float.valueOf(split[1]));
+                        if (b) {
+                            MensagemEnum mensagemEnum = padraoToEnum(split[0]);
+                            mensagemEnum.setjLabel(mensagemEnum.getNomeDisplay() + ": " + split[1]);
+                        }
+                    } else {
+                        MensagemEnum mensagemEnum = padraoToEnum(split[0]);
+                        mensagemEnum.setjLabel(mensagemEnum.getNomeDisplay() + ": " + split[1]);
+                    }
+
                 }
             }
         });
     }
 
+    private boolean deveAlterar(float peso) {
 
+        if (peso < 0L) {
+            return false;
+        }
+
+        float fivePercent = pesoGlobal * 0.05f;
+
+        // Calcula os limites superior e inferior
+        float lowerLimit = pesoGlobal - fivePercent;
+        float upperLimit = pesoGlobal + fivePercent;
+
+        // Verifica se o valor está dentro do intervalo de 5%
+        if (peso >= lowerLimit && peso <= upperLimit) {
+            return false;
+        } else {
+            return true;
+        }
+    }
 }
