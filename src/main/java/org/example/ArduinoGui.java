@@ -99,21 +99,42 @@ public class ArduinoGui {
                 String substring = message.substring(3, message.length());
 
                 String[] vetorString = substring.split(",");
+                InfoModel infoModel =new  InfoModel();
+
 
                 for (String s : vetorString) {
                     String[] split = s.split("=");
+
+
+
                     if (split[0].equals(PESO.getNomePadrao())) {
                         boolean b = deveAlterar(Float.valueOf(split[1]));
+
                         if (b) {
                             MensagemEnum mensagemEnum = padraoToEnum(split[0]);
-                            mensagemEnum.setjLabel(mensagemEnum.getNomeDisplay() + ": " + split[1]);
+                            String s1 = split[1];
+                            if (Float.valueOf(s1) < 0){
+                                s1 = "0.00";
+                            }
+                            mensagemEnum.setjLabel(mensagemEnum.getNomeDisplay() + ": " + s1);
+
+                            infoModel.setPeso(s1);
                         }
                     } else {
                         MensagemEnum mensagemEnum = padraoToEnum(split[0]);
                         mensagemEnum.setjLabel(mensagemEnum.getNomeDisplay() + ": " + split[1]);
+
+                        if (split[0].equals(TARA.getNomePadrao())){
+                            infoModel.setTara(split[1]);
+                        }
+                        if (split[0].equals(SENSOR.getNomePadrao())){
+                            infoModel.setSensor(split[1]);
+                        }
                     }
 
+
                 }
+                ApiComunication.post(infoModel);
             }
         });
     }
@@ -124,7 +145,7 @@ public class ArduinoGui {
             return false;
         }
 
-        float fivePercent = pesoGlobal * 0.05f;
+        float fivePercent = pesoGlobal * 0.10f;
 
         // Calcula os limites superior e inferior
         float lowerLimit = pesoGlobal - fivePercent;

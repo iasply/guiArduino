@@ -1,16 +1,18 @@
 
 k
-java:S1604."(Make this anonymous inner class a lambda(À³äø8ãÀôş1J$23a38c6f-9644-4d3c-8313-642107e66456
+java:S1604."(Make this anonymous inner class a lambda(À³äø8øÓí®„2J$2d7e43ad-993d-4f61-a813-6480f50fa906
 k
-java:S16047"(Make this anonymous inner class a lambda(Êùóò8äÀôş1J$1d175965-e9d8-4c15-ac06-2969c5159e10
+java:S16047"(Make this anonymous inner class a lambda(Êùóò8ùÓí®„2J$12aea6cc-b4b6-4c10-9562-99c0fd19801a
 Œ
-java:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´8«Áôş1J$42809df8-7c8d-487e-b1f2-e6e82e59a1e4
-r	java:S106`"+Replace this use of System.out by a logger.(øºÑûúÿÿÿÿ8¼Áôş1J$6189ecb2-d71b-4395-98f8-ad7059897a87
+java:S3252"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´8Ôí®„2J$57d0e720-a859-4433-bb2c-318d573e0f63
+•
+java:S3776]"RRefactor this method to reduce its Cognitive Complexity from 31 to the 15 allowed.(îñ˜†8™Ôí®„2J$6ea9d359-8cf7-43b3-81ac-74398ed408e2
+r	java:S106`"+Replace this use of System.out by a logger.(øºÑûúÿÿÿÿ8›Ôí®„2J$f98f9b36-f22e-4c63-816e-6d506704e7ac
 …
-java:S1126†"AReplace this if-then-else statement by a single return statement.(¤Ôï‘8ÈÁôş1J$7a7d355b-4ea1-457e-ac9b-f3e4560c10fa
+java:S1126›"AReplace this if-then-else statement by a single return statement.(¤Ôï‘8 Ôí®„2J$fac84221-bef2-4475-8e97-d61b74f1f75b
 o
-java:S1068"-Remove this unused "pesoLabel" private field.(Úáè/8ÊÁôş1J$9630be56-0955-4b49-a7cd-366980137b2c
+java:S1068"-Remove this unused "pesoLabel" private field.(Úáè/8¡Ôí®„2J$8118a261-bddd-477d-a899-76475aefecca
 u
-java:S1068"-Remove this unused "taraLabel" private field.(çÃ”şÿÿÿÿÿ8ËÁôş1J$180013ba-b06f-49d8-947b-5293e994546c
+java:S1068"-Remove this unused "taraLabel" private field.(çÃ”şÿÿÿÿÿ8¡Ôí®„2J$5712cbff-84bc-4a64-8dbb-3c9ee88603dd
 q
-java:S1068"/Remove this unused "sensorLabel" private field.(æãÓS8ËÁôş1J$0c8f21cd-15e1-473f-bf95-0bdde89a6d18
+java:S1068"/Remove this unused "sensorLabel" private field.(æãÓS8¡Ôí®„2J$9c450d80-cc61-42c4-804c-aeef64199368
